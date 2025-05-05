@@ -1,0 +1,206 @@
+/* header.css */
+.header {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(236, 196, 85, 0.12), rgba(233, 208, 95, 0.08)),
+              url("https://th.bing.com/th/id/OIP.8GU9NDBSXHB1AK6HxNebuAHaEJ?rs=1&pid=ImgDetMain");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add this in your header.css or similar */
+.header {
+  background-color: #f5f3e6;
+  /* Normal styles */
+}
+
+.header--logged-in {
+  background-color: #ede7d9; /* Light cream background for logged-in users */
+  /* Other styles for logged-in state */
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.header__content {
+  width: 100%;
+  max-width: 700px;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header__content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  color: rgba(190, 190, 190, 0.9);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header__btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  padding: 16px 32px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn__primary {
+  background: #ede7d9;
+  color:rgb(172, 161, 18);
+}
+
+.btn__primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn__primary:active {
+  transform: translateY(1px);
+}
+
+/* Cooking-themed decorative elements */
+.header::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Add spice particle animation for cooking theme */
+.header .spice-particle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: rgba(161, 84, 16, 0.3);
+  z-index: 1;
+  animation: float 3s infinite;
+}
+
+.header .spice-particle:nth-child(1) {
+  top: 20%;
+  right: 15%;
+}
+
+.header .spice-particle:nth-child(2) {
+  bottom: 30%;
+  left: 10%;
+  animation-delay: 1s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header__content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .header__content p {
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 14px 28px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header__content h1 {
+    font-size: 2rem;
+  }
+  
+  .header__content h2 {
+    font-size: 1.2rem;
+  }
+}

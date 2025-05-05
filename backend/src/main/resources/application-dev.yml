@@ -1,0 +1,14 @@
+ACCESS_TOKEN_PRIVATE_KEY_PATH: "access-refresh-token-keys/access-token-private.key"
+ACCESS_TOKEN_PUBLIC_KEY_PATH: "access-refresh-token-keys/access-token-public.key"
+REFRESH_TOKEN_PRIVATE_KEY_PATH: "access-refresh-token-keys/refresh-token-private.key"
+REFRESH_TOKEN_PUBLIC_KEY_PATH: "access-refresh-token-keys/refresh-token-public.key"
+MONGODB_USERNAME: "user1"
+MONGODB_PASSWORD: "pass1"
+MONGODB_HOST: "localhost"
+MONGODB_PORT: '27017'
+MONGODB_DB: "new_site"
+MONGODB_RS: "rs1"
+GOOGLE_CLIENT_ID: "48838306100-bce4oatjddocn7k7k4q4jlt3frncjga1.apps.googleusercontent.com"
+GOOGLE_CLIENT_SECRET: "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"
+
+

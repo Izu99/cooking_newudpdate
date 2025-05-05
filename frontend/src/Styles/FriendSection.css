@@ -1,0 +1,213 @@
+/* FriendsSection.css -  Theme */
+:root {
+  --primary-color: #0a6eb4; /*  blue instead of #1890ff */
+  --secondary-color: #2cc78b; /* Health green */
+  --accent-color: #ff6b6b; /* Heart rate red */
+  --favorite-color: #ff9d4a; /*  orange replacing #faad14 */
+  --light-bg: #f5f9fc;
+  --dark-text: #2e3e50;
+  --light-text: #ffffff;
+  --gray-text: #7a8c9e;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(10, 110, 180, 0.12);
+}
+
+.friends-section {
+  padding: 20px 0;
+}
+
+.friends-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(10, 110, 180, 0.15);
+}
+
+.friends-icon {
+  font-size: 24px;
+  color: var(--primary-color); /*  blue */
+  margin-right: 12px;
+}
+
+.friends-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark-text);
+}
+
+.friends-count {
+  margin-left: 12px;
+  color: var(--gray-text);
+  font-size: 14px;
+  background-color: rgba(10, 110, 180, 0.1);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.friends-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.friend-card {
+  position: relative;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--primary-color); /*  blue top border */
+}
+
+.friend-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(10, 110, 180, 0.18);
+}
+
+.friend-favorite {
+  border-top: 4px solid var(--favorite-color); /*  orange for favorites */
+}
+
+.favorite-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  color: var(--favorite-color);
+  font-size: 18px;
+}
+
+.friend-card-header {
+  text-align: center;
+  padding: 24px 0 12px;
+  background: linear-gradient(135deg, #0a6eb4 0%, #2cc78b 100%); /*  blue to health green gradient */
+}
+
+.friend-avatar {
+  border: 4px solid white;
+  box-shadow: 0 2px 8px rgba(10, 110, 180, 0.2);
+}
+
+.friend-card-body {
+  padding: 20px;
+  flex: 1;
+}
+
+.friend-name {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  text-align: center;
+  color: var(--primary-color); /*  blue for names */
+}
+
+.friend-status {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: var(--gray-text);
+}
+
+.friend-status-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Add pulse animation for  status */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.friend-status-item.active {
+  color: var(--secondary-color); /* Health green */
+}
+
+.friend-bio {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  color: var(--dark-text);
+  line-height: 1.5;
+  max-height: 80px;
+  overflow: auto;
+  text-align: center;
+  border-left: 3px solid var(--secondary-color); /* Health green accent */
+}
+
+.friend-card-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+  border-top: 1px solid rgba(10, 110, 180, 0.1);
+  background-color: rgba(10, 110, 180, 0.03);
+}
+
+.friend-action-btn {
+  font-size: 16px;
+  color: var(--gray-text);
+  transition: all 0.2s ease;
+}
+
+.friend-action-btn:hover {
+  background-color: rgba(10, 110, 180, 0.1);
+  color: var(--primary-color);
+}
+
+.friend-action-btn.message-btn:hover {
+  color: var(--primary-color);
+}
+
+.friend-action-btn.-btn:hover {
+  color: var(--secondary-color);
+}
+
+.friend-action-btn.stats-btn:hover {
+  color: var(--accent-color);
+}
+
+/* Health metrics badge - can be used to show friend's activity level */
+.health-metric {
+  position: absolute;
+  top: 52px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(10, 110, 180, 0.2);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .friends-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .friends-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .friend-card {
+    max-width: 100%;
+  }
+}

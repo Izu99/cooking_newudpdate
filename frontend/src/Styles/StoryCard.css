@@ -1,0 +1,315 @@
+/* StoryCard.css -  theme version */
+.story-card {
+  min-width: 80px;
+  width: 90px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 80, 160, 0.15);
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.story-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 80, 160, 0.25);
+}
+
+.story-image-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-author {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 80, 160, 0.2);
+}
+
+.story-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 50, 100, 0.7), transparent);
+  color: white;
+  padding: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* TopBox.css -  theme version */
+.topbox-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 80, 160, 0.08);
+  padding: 16px;
+  margin-bottom: 24px;
+  border-top: 3px solid #d35400;
+}
+
+.topbox-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #d35400;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e3f2fd;
+}
+
+.stories-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 8px 0;
+  gap: 12px;
+  scrollbar-width: thin;
+}
+
+.stories-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.stories-container::-webkit-scrollbar-thumb {
+  background-color: #90caf9;
+  border-radius: 6px;
+}
+
+.my_story_card {
+  min-width: 80px;
+  width: 90px;
+  height: 140px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d35400, #d35400);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(30, 136, 229, 0.3);
+  flex-shrink: 0;
+}
+
+.my_story_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.4);
+}
+
+.create-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-text {
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Modal Story Styles -  theme */
+.story-view-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-image-wrapper {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  box-shadow: 0 3px 10px rgba(0, 80, 160, 0.1);
+}
+
+.story-full-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-details {
+  padding: 8px 0;
+}
+
+.story-details h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 18px;
+  color: #d35400;
+}
+
+.story-details p {
+  font-size: 14px;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+.story-timestamp {
+  margin-top: 12px;
+  font-size: 12px;
+  color: #64b5f6;
+}
+
+.story-image-editor {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #90caf9;
+}
+
+.edit-story-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-uploading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(30, 136, 229, 0.05);
+}
+
+/* Create Story Modal Styles -  theme */
+.image-upload-area {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f9ff;
+}
+
+.upload-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border: 2px dashed #90caf9;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.upload-placeholder:hover {
+  border-color: #d35400;
+}
+
+.upload-placeholder p {
+  margin-top: 8px;
+  color: #5c93c4;
+}
+
+.uploading-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 4px;
+  border: 1px solid #e3f2fd;
+}
+
+/* Additional -themed elements */
+.health-tip-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 80, 160, 0.8);
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 0 0 0 8px;
+}
+
+.verified-content {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #d35400;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Pulse animation for new stories */
+.story-card.new-content::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background-color: #d35400;
+  border-radius: 50%;
+  z-index: 2;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(30, 136, 229, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(30, 136, 229, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(30, 136, 229, 0);
+  }
+}

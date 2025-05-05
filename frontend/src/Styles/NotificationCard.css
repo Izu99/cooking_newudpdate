@@ -1,0 +1,52 @@
+/* ../Styles/Notifications.css */
+.notifications-container {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.notifications-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.notification-item {
+  background: linear-gradient(to right,rgb(136, 111, 0), #d35400a0);
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px!important;
+  margin-bottom: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(211, 84, 0, 0.2);
+}
+
+.notification-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(211, 84, 0, 0.3);
+}
+
+.notification-message {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.notification-description {
+  font-size: 14px;
+  color: #fff!important;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.empty-notification {
+  text-align: center;
+  padding: 40px 0;
+  color: #999;
+}

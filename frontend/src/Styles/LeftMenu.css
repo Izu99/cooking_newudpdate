@@ -1,0 +1,147 @@
+/* left-menu.css */
+.left-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #f5f3e6;
+  color: #fff;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.left-menu-header {
+  display: flex;
+  align-items: center;
+  padding: 0 24px 20px;
+  border-bottom: 1px solid rgba(211, 84, 0, 0.08);
+  margin-bottom: 16px;
+}
+
+.left-menu-header img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-right: 12px;
+  box-shadow: 0 2px 10px rgba(230, 126, 34, 0.2);
+}
+
+.left-menu-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #888010;
+  margin: 0;
+}
+
+.left-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-menu-item {
+  position: relative;
+  margin-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.left-menu-link {
+  display: block;
+  padding: 14px 24px;
+  color: #5f6c7b;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.left-menu-item:hover .left-menu-link {
+  color: #888010;
+  background-color: rgba(230, 126, 34, 0.06);
+}
+
+.left-menu-item.active .left-menu-link {
+  color:#888010;
+  font-weight: 600;
+  background-color: rgba(230, 126, 34, 0.1);
+  border-left: 3px solid #883200;
+}
+
+.left-menu-active-indicator {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background: linear-gradient(to bottom, #888010, #883200);
+  border-radius: 4px 0 0 4px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 992px) {
+  .left-menu {
+    width: 240px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .left-menu {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    position: static;
+  }
+  
+  .left-menu-header {
+    padding: 0 16px 16px;
+  }
+  
+  .left-menu-link {
+    padding: 12px 16px;
+  }
+}
+
+/* Subtle hover animation */
+.left-menu-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.left-menu-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color:#883200;
+  transition: width 0.3s ease;
+}
+
+.left-menu-item:hover::after {
+  width: 100%;
+}
+
+/* Custom scrollbar for the menu if it gets too long */
+.left-menu {
+  scrollbar-width: thin;
+  scrollbar-color: #883200 #f5f3e6;
+}
+
+.left-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.left-menu::-webkit-scrollbar-track {
+  background: #f5f3e6;
+}
+
+.left-menu::-webkit-scrollbar-thumb {
+  background-color: #883200;
+  border-radius: 6px;
+}
